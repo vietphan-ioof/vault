@@ -1,8 +1,9 @@
-version: '3.7'
+version: '3.9'
 
 services:
+
   vault-agent:
-    image: hashicorp/vault:1.9.6
+    image: vault:1.11.2
     restart: always
     ports:
       - "8200:8200"
@@ -15,8 +16,9 @@ services:
     depends_on:
       vault:
         condition: service_healthy
+ 
   vault:
-    image: hashicorp/vault:1.9.6
+    image: vault:1.11.2
     restart: always
     volumes:
       - ./helpers:/helpers
