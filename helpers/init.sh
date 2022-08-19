@@ -1,5 +1,5 @@
+sed -i 's/https/http/' /etc/apk/repositories
 apk add jq curl
-
 export VAULT_ADDR=http://localhost:8200
 root_token=$(cat /helpers/keys.json | jq -r '.root_token')
 
