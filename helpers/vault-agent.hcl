@@ -3,13 +3,13 @@ pid_file = "./pidfile"
 vault {
   address = "http://vault:8200"
   retry {
-  num_retries = 5
+    num_retries = 5
   }
 }
 
 auto_auth {
   method {
-  type = "approle"
+    type = "approle"
     config = {
       role_id_file_path = "/helpers/role_id"
       secret_id_file_path = "/helpers/secret_id"
